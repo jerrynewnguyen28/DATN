@@ -1,9 +1,10 @@
 import pandas as pd
+import tensorflow
 import keras
 from keras.preprocessing.text import Tokenizer 
 import string
 import numpy as np
-from keras.utils import to_categorical
+from tensorflow.keras.utils import to_categorical
 import argparse
 
 def tokenizer(alphabet,url_length=200):
