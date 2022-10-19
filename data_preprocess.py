@@ -4,7 +4,8 @@ import keras
 from keras.preprocessing.text import Tokenizer 
 import string
 import numpy as np
-from tensorflow.keras.utils import to_categorical
+#from tensorflow.keras.utils import to_categorical
+from keras.utils import to_categorical
 import argparse
 
 def tokenizer(alphabet,url_length=200):

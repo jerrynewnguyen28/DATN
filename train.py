@@ -8,6 +8,7 @@ import string
 import gc
 import keras.backend as K
 from sklearn.utils import shuffle
+from datetime import datetime
 
 def train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=200, n_batch=64,savedir="dummy"):
     # calculate the number of batches per training epoch
@@ -87,6 +88,11 @@ if __name__ == "__main__":
     parser.add_argument('--weight_name_gen',type=str, help='path/to/generator/weight/.h5 file', required=False)
     args = parser.parse_args()
 
+    now = datetime.now()
+    # dd/mm/YY H:M:S
+    dt_string = now.strftime("%H:%M:%S")
+    print("--------------------------------------------------")
+    print("date and time start=", dt_string)
 
     K.clear_session()
     if not os.path.exists(args.savedir):
@@ -107,3 +113,9 @@ if __name__ == "__main__":
     dataset = shuffle(data['X_train'], data['y_train'])
     # train model
     train(generator, discriminator, gan_model, dataset, latent_dim=args.latent_dim,n_epochs=args.epochs, n_batch=args.batch_size,savedir=args.savedir)
+    now1 = datetime.now()
+    # dd/mm/YY H:M:S
+    dt_string1 = now1.strftime("%H:%M:%S")
+    print("--------------------------------------------------")
+    print("date and time start=", dt_string)
+    print("date and time end =", dt_string1)
