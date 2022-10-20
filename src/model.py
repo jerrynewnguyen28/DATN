@@ -1,12 +1,12 @@
 
 import tensorflow as tf
 from tensorflow import keras
-from keras.layers import Layer, Reshape, Activation, Conv1D, Conv1DTranspose, Dropout
-from keras.layers import Input, Add, Concatenate, Embedding,LeakyReLU,Dense, BatchNormalization, Flatten
+from tensorflow.keras.layers import Layer, Reshape, Activation, Conv1D, Conv1DTranspose, Dropout
+from tensorflow.keras.layers import Input, Add, Concatenate, Embedding,LeakyReLU,Dense, BatchNormalization, Flatten
 from tensorflow.keras.optimizers import Adam
 #from keras.optimizers import Adam
-from keras.models import Model
-from keras.initializers import RandomNormal
+from tensorflow.keras.models import Model
+from tensorflow.keras.initializers import RandomNormal
 from functools import partial
 
 
