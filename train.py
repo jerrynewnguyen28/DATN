@@ -90,6 +90,10 @@ if __name__ == "__main__":
     parser.add_argument('--weight_name_gen',type=str, help='path/to/generator/weight/.h5 file', required=False)
     args = parser.parse_args()
 
+    gpu_devices = tf.config.experimental.list_physical_devices('GPU')
+    for device in gpu_devices:
+        tf.config.experimental.set_memory_growth(device, True)
+
     now = datetime.now()
     # dd/mm/YY H:M:S
     dt_string = now.strftime("%H:%M:%S")
