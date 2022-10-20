@@ -6,7 +6,9 @@ import os
 import argparse
 import string 
 import gc
-import keras.backend as K
+import tensorflow
+from tensorflow import keras
+import tensorflow.keras.backend as K
 from sklearn.utils import shuffle
 from datetime import datetime
 
