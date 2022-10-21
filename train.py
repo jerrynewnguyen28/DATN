@@ -80,7 +80,7 @@ def train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=200, n_batc
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--epochs', type=int, default=200)
+    parser.add_argument('--epochs', type=int, default=2)
     parser.add_argument('--batch_size', type=int, default=64)
     parser.add_argument('--npz_file', type=str, default='phishing.npz', help='path/to/npz/file')
     parser.add_argument('--latent_dim', type=int, default=50)
